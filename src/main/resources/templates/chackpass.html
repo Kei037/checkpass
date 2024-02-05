@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Chack Pass Page</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" th:href="@{/assets/favicon.ico}" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div class="border-end bg-white" id="sidebar-wrapper">
+        <div class="sidebar-heading border-bottom bg-light">Chack Pass</div>
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+        </div>
+    </div>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container-fluid">
+                <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid" layout:fragment="content">
+            <h1 class="mt-4">합격 여부 확인하기</h1>
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">이름</span>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">전화번호</span>
+                    <input type="number" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">이메일</span>
+                    <input type="email" class="form-control">
+                    <select class="form-select">
+                        <option>email 선택</option>
+                        <option>naver.com</option>
+                        <option>kakao.com</option>
+                        <option>gmail.com</option>
+                        <option>daum.com</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary listBtn">확인</button>
+            </div> <!-- end card body -->
+
+        </div>
+    </div>
+</div>
+ Bootstrap core JS
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ Core theme JS
+<script th:src="@{/js/scripts.js}"></script>
+<th:block layout:fragment="script">
+
+</th:block>
+</body>
+</html>
