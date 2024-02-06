@@ -2,6 +2,7 @@ package com.checkpass.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Getter
@@ -20,6 +21,11 @@ public class User extends BaseEntity {
     @Column(length = 20, nullable = false)
     private String email;
 
-    @Column(length = 20, nullable = false)
+    @Column(length = 30, nullable = false)
     private String phoneNumber;
+
+    @Column(nullable = false)
+    @ColumnDefault("0")
+    private boolean checkPass;
+
 }
