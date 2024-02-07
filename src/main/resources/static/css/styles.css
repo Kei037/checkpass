@@ -702,6 +702,24 @@ progress {
   align-items: center;
 }
 
+.row-custom2 {
+  flex-shrink: 0;
+  width: 1000px;
+  max-width: 1000px;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  flex-direction: column;
+  align-items: center;
+}
+
 .col {
   flex: 1 0 0%;
 }
@@ -4223,6 +4241,24 @@ textarea.form-control-lg {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
+}
+
+.card-body-custom {
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--bs-card-color);
+  width: 700px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: auto;
+}
+
+.card-body-custom2 {
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--bs-card-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-title {
