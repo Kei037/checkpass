@@ -12,8 +12,11 @@ import org.hibernate.annotations.ColumnDefault;
 @ToString
 public class User extends BaseEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long uno;
+    @Column(length = 20, nullable = false)
+    private String userId;
+
+    @Column(length = 20, nullable = false)
+    private String userPw;
 
     @Column(length = 20, nullable = false)
     private String name;
@@ -23,9 +26,5 @@ public class User extends BaseEntity {
 
     @Column(length = 30, nullable = false)
     private String phoneNumber;
-
-    @Column(nullable = false)
-    @ColumnDefault("0")
-    private boolean checkPass;
 
 }
