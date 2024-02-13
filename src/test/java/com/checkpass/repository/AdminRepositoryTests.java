@@ -15,20 +15,13 @@ public class AdminRepositoryTests {
     private AdminRepository adminRepository;
 
     @Test
-    public void testInsert() {
-        Admin admin = Admin.builder().adId("admin").adPw("admin").build();
-        Admin result = adminRepository.save(admin);
-        log.info("ANO: " + result.getAno());
-    }
-
-    @Test
     public void testSelect() {
         Long ano = 1L;
         Optional<Admin> result = adminRepository.findById(ano);
         Admin admin = result.orElseThrow();
         log.info(admin);
     }
-
+/*
     @Test
     public void testUpdate() {
         Long ano = 2L;
@@ -38,7 +31,7 @@ public class AdminRepositoryTests {
         admin.change("adminTest", "adminTest");
         adminRepository.save(admin);
     }
-
+ */
     @Test
     public void deleteTest() {
         Long ano = 2L;

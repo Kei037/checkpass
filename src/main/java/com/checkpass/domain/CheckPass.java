@@ -12,10 +12,11 @@ import lombok.*;
 public class CheckPass {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long cno;
+    private long cid;
 
-    @Column
-    private String userId;
+    @OneToOne  // 일대일 구조 관계
+    @JoinColumn(name = "user_id") // 외래키 컬럼명 설정
+    private User user;
 
     @Column
     private boolean pass;

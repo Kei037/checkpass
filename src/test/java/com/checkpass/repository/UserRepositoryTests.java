@@ -14,7 +14,7 @@ public class UserRepositoryTests {
 
     @Test
     public void testInsert() {
-        User user = User.builder()
+        User user = User.builder().userId("testId").userPw("testPw")
                 .name("김자바")
                 .email("test1@gamil.com")
                 .phoneNumber("01023456789").build();
